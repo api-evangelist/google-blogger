@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/google-blogger/refs/heads/main/json-schema/blogger.json",
+  "title": "Blogger Post",
+  "description": "A post resource from the Google Blogger API v3.",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "type": "string",
+      "const": "blogger#post"
+    },
+    "id": {
+      "type": "string",
+      "description": "The identifier of this Post."
+    },
+    "blog": {
+      "type": "object",
+      "description": "Data about the blog containing this Post.",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      }
+    },
+    "published": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date the post was published."
+    },
+    "updated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date the post was last updated."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "The URL where this Post is displayed."
+    },
+    "selfLink": {
+      "type": "string",
+      "format": "uri",
+      "description": "The API REST URL to fetch this resource from."
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the Post."
+    },
+    "content": {
+      "type": "string",
+      "description": "The content of the Post, which can include HTML markup."
+    },
+    "author": {
+      "type": "object",
+      "description": "The author of this Post.",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "image": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        }
+      }
+    },
+    "labels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The list of labels this Post was tagged with."
+    },
+    "replies": {
+      "type": "object",
+      "description": "The container of comments on this Post.",
+      "properties": {
+        "totalItems": {
+          "type": "string"
+        },
+        "selfLink": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["LIVE", "DRAFT", "SCHEDULED"],
+      "description": "Status of the post."
+    }
+  },
+  "required": ["kind", "id", "title"]
+}

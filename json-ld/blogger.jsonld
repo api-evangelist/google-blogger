@@ -1,0 +1,34 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "blogger": "https://www.googleapis.com/blogger/v3/",
+    "Blog": "schema:Blog",
+    "Post": "schema:BlogPosting",
+    "Page": "schema:WebPage",
+    "Comment": "schema:Comment",
+    "User": "schema:Person",
+    "id": "schema:identifier",
+    "title": "schema:headline",
+    "content": "schema:articleBody",
+    "published": {
+      "@id": "schema:datePublished",
+      "@type": "schema:DateTime"
+    },
+    "updated": {
+      "@id": "schema:dateModified",
+      "@type": "schema:DateTime"
+    },
+    "url": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "author": "schema:author",
+    "displayName": "schema:name",
+    "labels": "schema:keywords",
+    "replies": "schema:comment",
+    "totalItems": "schema:commentCount",
+    "description": "schema:description",
+    "about": "schema:description",
+    "name": "schema:name"
+  }
+}
