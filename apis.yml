@@ -1,5 +1,5 @@
 aid: google-blogger
-name: Google Blogger API
+name: Google Blogger
 description: >-
   The Google Blogger API v3 allows you to integrate Blogger content with your
   application. You can create, read, update, and delete blogs, posts, pages,
