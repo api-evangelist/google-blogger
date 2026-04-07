@@ -21,7 +21,7 @@ tags:
   - Publishing
 apis:
   - aid: google-blogger:google-blogger
-    name: Google Blogger API v3
+    name: Google Blogger API V3
     description: >-
       The Blogger API v3 provides programmatic access to Blogger data. Manage
       blogs, posts, pages, comments, and users through RESTful endpoints.
