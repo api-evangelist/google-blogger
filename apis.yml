@@ -14,10 +14,10 @@ specificationVersion: '0.19'
 tags:
   - Blogging
   - CMS
-  - Google
-  - Posts
-  - Pages
   - Comments
+  - Google
+  - Pages
+  - Posts
   - Publishing
 apis:
   - aid: google-blogger:google-blogger
