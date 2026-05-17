@@ -33,11 +33,11 @@ apis:
       - type: JSONSchema
         url: json-schema/blogger.json
 common:
-  - type: Getting Started
+  - type: GettingStarted
     url: https://developers.google.com/blogger/docs/3.0/getting_started
   - type: Pricing
     url: https://developers.google.com/blogger/docs/3.0/using
-  - type: JSON-LD
+  - type: JSONLD
     url: json-ld/blogger.jsonld
 maintainers:
   - FN: Kin Lane
