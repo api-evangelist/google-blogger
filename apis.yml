@@ -31,6 +31,12 @@ apis:
       - type: JSONSchema
         url: json-schema/blogger.json
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-blogger-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-blogger-domain-security.yml
+  - type: Authentication
+    url: authentication/google-blogger-authentication.yml
   - type: OAuthScopes
     url: scopes/google-blogger-scopes.yml
   - type: LinkedIn
