@@ -31,6 +31,8 @@ apis:
       - type: JSONSchema
         url: json-schema/blogger.json
 common:
+  - type: OAuthScopes
+    url: scopes/google-blogger-scopes.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/blogger
   - type: GettingStarted
