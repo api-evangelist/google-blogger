@@ -31,6 +31,8 @@ apis:
       - type: JSONSchema
         url: json-schema/blogger.json
 common:
+  - type: AgenticAccess
+    url: agentic-access/google-blogger-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/google-blogger-vulnerability-disclosure.yml
   - type: DomainSecurity
