@@ -1,16 +1,18 @@
 openapi: 3.1.0
 info:
-  title: Google Blogger API
-  description: >-
-    The Blogger API v3 allows you to create, read, update, and delete Blogger
-    resources including blogs, posts, pages, comments, and users. You can
-    integrate Blogger content into your application using RESTful operations.
+  title: Google Blogger Blogs API
+  description: The Blogger API v3 allows you to create, read, update, and delete Blogger resources including blogs, posts, pages, comments, and users. You can integrate Blogger content into your application using RESTful operations.
   version: v3
   contact:
     name: Google
     url: https://developers.google.com/blogger
 servers:
-  - url: https://www.googleapis.com/blogger/v3
+- url: https://www.googleapis.com/blogger/v3
+security:
+- oauth2: []
+- apiKey: []
+tags:
+- name: Blogs
 paths:
   /blogs/{blogId}:
     get:
@@ -18,11 +20,11 @@ paths:
       summary: Get a blog
       description: Gets a blog by ID.
       parameters:
-        - name: blogId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: blogId
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -30,18 +32,20 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Blog'
+      tags:
+      - Blogs
   /blogs/byurl:
     get:
       operationId: getBlogByUrl
       summary: Get a blog by URL
       description: Gets a blog by URL.
       parameters:
-        - name: url
-          in: query
-          required: true
-          schema:
-            type: string
-            format: uri
+      - name: url
+        in: query
+        required: true
+        schema:
+          type: string
+          format: uri
       responses:
         '200':
           description: Successful response
@@ -49,72 +53,56 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Blog'
-  /users/{userId}/blogs:
-    get:
-      operationId: listBlogsByUser
-      summary: List blogs by user
-      description: Lists blogs by user.
-      parameters:
-        - name: userId
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/BlogListResponse'
+      tags:
+      - Blogs
   /blogs/{blogId}/posts:
     get:
       operationId: listPosts
       summary: List posts
       description: Lists posts for a blog.
       parameters:
-        - name: blogId
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: maxResults
-          in: query
-          schema:
-            type: integer
-        - name: pageToken
-          in: query
-          schema:
-            type: string
-        - name: labels
-          in: query
-          schema:
-            type: string
-        - name: startDate
-          in: query
-          schema:
-            type: string
-            format: date-time
-        - name: endDate
-          in: query
-          schema:
-            type: string
-            format: date-time
-        - name: status
-          in: query
-          schema:
-            type: string
-            enum:
-              - draft
-              - live
-              - scheduled
-        - name: orderBy
-          in: query
-          schema:
-            type: string
-            enum:
-              - published
-              - updated
+      - name: blogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: maxResults
+        in: query
+        schema:
+          type: integer
+      - name: pageToken
+        in: query
+        schema:
+          type: string
+      - name: labels
+        in: query
+        schema:
+          type: string
+      - name: startDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: endDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: status
+        in: query
+        schema:
+          type: string
+          enum:
+          - draft
+          - live
+          - scheduled
+      - name: orderBy
+        in: query
+        schema:
+          type: string
+          enum:
+          - published
+          - updated
       responses:
         '200':
           description: Successful response
@@ -122,20 +110,22 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PostListResponse'
+      tags:
+      - Blogs
     post:
       operationId: insertPost
       summary: Create a post
       description: Adds a post to a blog.
       parameters:
-        - name: blogId
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: isDraft
-          in: query
-          schema:
-            type: boolean
+      - name: blogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: isDraft
+        in: query
+        schema:
+          type: boolean
       requestBody:
         content:
           application/json:
@@ -148,22 +138,24 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Post'
+      tags:
+      - Blogs
   /blogs/{blogId}/posts/{postId}:
     get:
       operationId: getPost
       summary: Get a post
       description: Gets a post by blog ID and post ID.
       parameters:
-        - name: blogId
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: postId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: blogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: postId
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -171,21 +163,23 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Post'
+      tags:
+      - Blogs
     put:
       operationId: updatePost
       summary: Update a post
       description: Updates a post by blog ID and post ID.
       parameters:
-        - name: blogId
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: postId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: blogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: postId
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         content:
           application/json:
@@ -194,21 +188,23 @@ paths:
       responses:
         '200':
           description: Successful response
+      tags:
+      - Blogs
     patch:
       operationId: patchPost
       summary: Patch a post
       description: Patches a post.
       parameters:
-        - name: blogId
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: postId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: blogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: postId
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         content:
           application/json:
@@ -217,40 +213,44 @@ paths:
       responses:
         '200':
           description: Successful response
+      tags:
+      - Blogs
     delete:
       operationId: deletePost
       summary: Delete a post
       description: Deletes a post by blog ID and post ID.
       parameters:
-        - name: blogId
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: postId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: blogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: postId
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '204':
           description: Successful deletion
+      tags:
+      - Blogs
   /blogs/{blogId}/posts/search:
     get:
       operationId: searchPosts
       summary: Search posts
       description: Searches for posts matching the given query terms in a blog.
       parameters:
-        - name: blogId
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: q
-          in: query
-          required: true
-          schema:
-            type: string
+      - name: blogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: q
+        in: query
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -258,17 +258,19 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PostListResponse'
+      tags:
+      - Blogs
   /blogs/{blogId}/pages:
     get:
       operationId: listPages
       summary: List pages
       description: Lists pages for a blog.
       parameters:
-        - name: blogId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: blogId
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -276,16 +278,18 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PageListResponse'
+      tags:
+      - Blogs
     post:
       operationId: insertPage
       summary: Create a page
       description: Adds a page to a blog.
       parameters:
-        - name: blogId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: blogId
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         content:
           application/json:
@@ -294,30 +298,32 @@ paths:
       responses:
         '200':
           description: Successful response
+      tags:
+      - Blogs
   /blogs/{blogId}/posts/{postId}/comments:
     get:
       operationId: listComments
       summary: List comments
       description: Lists comments for a post.
       parameters:
-        - name: blogId
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: postId
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: maxResults
-          in: query
-          schema:
-            type: integer
-        - name: pageToken
-          in: query
-          schema:
-            type: string
+      - name: blogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: postId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: maxResults
+        in: query
+        schema:
+          type: integer
+      - name: pageToken
+        in: query
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -325,27 +331,29 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CommentListResponse'
+      tags:
+      - Blogs
   /blogs/{blogId}/posts/{postId}/comments/{commentId}:
     get:
       operationId: getComment
       summary: Get a comment
       description: Gets a comment by ID.
       parameters:
-        - name: blogId
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: postId
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: commentId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: blogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: postId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: commentId
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -353,111 +361,52 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Comment'
+      tags:
+      - Blogs
     delete:
       operationId: deleteComment
       summary: Delete a comment
       description: Deletes a comment by blog ID, post ID, and comment ID.
       parameters:
-        - name: blogId
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: postId
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: commentId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: blogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: postId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: commentId
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '204':
           description: Successful deletion
-  /users/{userId}:
-    get:
-      operationId: getUser
-      summary: Get a user
-      description: Gets a user by user ID.
-      parameters:
-        - name: userId
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/User'
+      tags:
+      - Blogs
 components:
   schemas:
-    Blog:
+    PostListResponse:
       type: object
       properties:
         kind:
           type: string
-          const: "blogger#blog"
-        id:
-          type: string
-        name:
-          type: string
-        description:
-          type: string
-        published:
-          type: string
-          format: date-time
-        updated:
-          type: string
-          format: date-time
-        url:
-          type: string
-          format: uri
-        selfLink:
-          type: string
-          format: uri
-        posts:
-          type: object
-          properties:
-            totalItems:
-              type: integer
-            selfLink:
-              type: string
-              format: uri
-        pages:
-          type: object
-          properties:
-            totalItems:
-              type: integer
-            selfLink:
-              type: string
-              format: uri
-        locale:
-          type: object
-          properties:
-            language:
-              type: string
-            country:
-              type: string
-    BlogListResponse:
-      type: object
-      properties:
-        kind:
+        nextPageToken:
           type: string
         items:
           type: array
           items:
-            $ref: '#/components/schemas/Blog'
+            $ref: '#/components/schemas/Post'
     Post:
       type: object
       properties:
         kind:
           type: string
-          const: "blogger#post"
+          const: blogger#post
         id:
           type: string
         blog:
@@ -512,10 +461,66 @@ components:
         status:
           type: string
           enum:
-            - LIVE
-            - DRAFT
-            - SCHEDULED
-    PostListResponse:
+          - LIVE
+          - DRAFT
+          - SCHEDULED
+    PageListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Page'
+    Blog:
+      type: object
+      properties:
+        kind:
+          type: string
+          const: blogger#blog
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        published:
+          type: string
+          format: date-time
+        updated:
+          type: string
+          format: date-time
+        url:
+          type: string
+          format: uri
+        selfLink:
+          type: string
+          format: uri
+        posts:
+          type: object
+          properties:
+            totalItems:
+              type: integer
+            selfLink:
+              type: string
+              format: uri
+        pages:
+          type: object
+          properties:
+            totalItems:
+              type: integer
+            selfLink:
+              type: string
+              format: uri
+        locale:
+          type: object
+          properties:
+            language:
+              type: string
+            country:
+              type: string
+    CommentListResponse:
       type: object
       properties:
         kind:
@@ -525,13 +530,13 @@ components:
         items:
           type: array
           items:
-            $ref: '#/components/schemas/Post'
+            $ref: '#/components/schemas/Comment'
     Page:
       type: object
       properties:
         kind:
           type: string
-          const: "blogger#page"
+          const: blogger#page
         id:
           type: string
         blog:
@@ -568,23 +573,14 @@ components:
         status:
           type: string
           enum:
-            - LIVE
-            - DRAFT
-    PageListResponse:
-      type: object
-      properties:
-        kind:
-          type: string
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Page'
+          - LIVE
+          - DRAFT
     Comment:
       type: object
       properties:
         kind:
           type: string
-          const: "blogger#comment"
+          const: blogger#comment
         id:
           type: string
         post:
@@ -621,52 +617,10 @@ components:
         status:
           type: string
           enum:
-            - LIVE
-            - EMPTIED
-            - PENDING
-            - SPAM
-    CommentListResponse:
-      type: object
-      properties:
-        kind:
-          type: string
-        nextPageToken:
-          type: string
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Comment'
-    User:
-      type: object
-      properties:
-        kind:
-          type: string
-          const: "blogger#user"
-        id:
-          type: string
-        selfLink:
-          type: string
-          format: uri
-        displayName:
-          type: string
-        url:
-          type: string
-          format: uri
-        about:
-          type: string
-        blogs:
-          type: object
-          properties:
-            selfLink:
-              type: string
-              format: uri
-        locale:
-          type: object
-          properties:
-            language:
-              type: string
-            country:
-              type: string
+          - LIVE
+          - EMPTIED
+          - PENDING
+          - SPAM
   securitySchemes:
     oauth2:
       type: oauth2
@@ -681,6 +635,3 @@ components:
       type: apiKey
       in: query
       name: key
-security:
-  - oauth2: []
-  - apiKey: []
