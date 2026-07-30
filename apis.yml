@@ -4,7 +4,20 @@ description: >-
   The Google Blogger API v3 allows you to integrate Blogger content with your application. You can create, read, update,
   and delete blogs, posts, pages, comments, and user information using RESTful operations with OAuth 2.0 authentication.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-blogger.png
 url: https://raw.githubusercontent.com/api-evangelist/google-blogger/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
@@ -18,18 +31,30 @@ tags:
   - Posts
   - Publishing
 apis:
-  - aid: google-blogger:google-blogger
-    name: Google Blogger API V3
-    description: >-
-      The Blogger API v3 provides programmatic access to Blogger data. Manage blogs, posts, pages, comments, and users
-      through RESTful endpoints.
-    humanURL: https://developers.google.com/blogger
-    baseURL: https://www.googleapis.com/blogger/v3
-    properties:
-      - type: OpenAPI
-        url: openapi/blogger.yml
-      - type: JSONSchema
-        url: json-schema/blogger.json
+- aid: google-blogger:google-blogger-blogs-api
+  name: Google Blogger Blogs API
+  description: The Blogs API from Google Blogger — 8 operation(s) for blogs.
+  humanURL: https://developers.google.com/blogger
+  baseURL: https://www.googleapis.com/blogger/v3
+  tags:
+  - Blogs
+  properties:
+  - type: OpenAPI
+    url: openapi/google-blogger-blogs-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/blogger.json
+- aid: google-blogger:google-blogger-users-api
+  name: Google Blogger Users API
+  description: The Users API from Google Blogger — 2 operation(s) for users.
+  humanURL: https://developers.google.com/blogger
+  baseURL: https://www.googleapis.com/blogger/v3
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/google-blogger-users-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/blogger.json
 common:
   - type: AgenticAccess
     url: agentic-access/google-blogger-agentic-access.yml
