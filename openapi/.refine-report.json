@@ -1,0 +1,16 @@
+{
+  "provider": "google-blogger",
+  "sources": [
+    "google-blogger-blogs-api-openapi.yml",
+    "google-blogger-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-blogger-blogs-api-openapi.yml",
+    "google-blogger-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
