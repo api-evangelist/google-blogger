@@ -1,0 +1,247 @@
+{
+  "item": [
+    {
+      "id": "556f606d-dec5-40a9-bf8f-41afe879d85e",
+      "name": "Users",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "881a6d37-e005-4bdb-817b-6a59f0fc7395",
+          "name": "List blogs by user",
+          "request": {
+            "name": "List blogs by user",
+            "description": {
+              "content": "Lists blogs by user.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "users",
+                ":userId",
+                "blogs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "befb9c32-a92b-42d6-ae0d-0053099b2e35",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "users",
+                    ":userId",
+                    "blogs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "userId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"items\": [\n    {\n      \"kind\": \"string\",\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"published\": \"1980-02-06T22:35:52.789Z\",\n      \"updated\": \"2023-03-10T14:08:18.904Z\",\n      \"url\": \"https://LvqowTRRmEtBgOPDBi.baIOd3mhPlwLR.UNOUGamFQdNRE1.suDTGBnGQJvsYXp2E+jML3M8UfsvC-tTI6OgmpMJnybuL8N\",\n      \"selfLink\": \"https://Qrcmojge.ziuTd1.YQrPHLrPY49tEXHnQR9uh\",\n      \"posts\": {\n        \"totalItems\": 3856,\n        \"selfLink\": \"https://PBiC.lpxLknRMGs+AngKiVkbiZeAh8l0des\"\n      },\n      \"pages\": {\n        \"totalItems\": 9282,\n        \"selfLink\": \"https://zrAKDSvchjzrIOyPwzFL.ulsqLEurO.fhyJbwppSBM7mJbi4ZFkvux5TPU\"\n      },\n      \"locale\": {\n        \"language\": \"string\",\n        \"country\": \"string\"\n      }\n    },\n    {\n      \"kind\": \"string\",\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"published\": \"2008-08-23T00:57:37.181Z\",\n      \"updated\": \"1983-03-07T10:18:48.380Z\",\n      \"url\": \"https://bQOaGBNPlevZyvLQ.okzqEROaJI4i.qNyQoycnR4H1ncG9ZbDiuya9t6v\",\n      \"selfLink\": \"http://g.bqzCJJFXu5zc.GfJhUq1mXvQJVYNrsmAGHrtb9MTC7U6\",\n      \"posts\": {\n        \"totalItems\": 5889,\n        \"selfLink\": \"https://stJ.jnnhumgFddR1+Wmm-lxgNRy2sDoLD0Izd6ncCTK64xgQTIcLEo9dVYFsri81kBnb-Bs6DPwy\"\n      },\n      \"pages\": {\n        \"totalItems\": 400,\n        \"selfLink\": \"https://Zu.xbzqe-t4nZFWpERBNvoPhoGnFQfzRzrXpI\"\n      },\n      \"locale\": {\n        \"language\": \"string\",\n        \"country\": \"string\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d3c076d2-ce94-4670-a2a8-93ba2c42a724",
+          "name": "Get a user",
+          "request": {
+            "name": "Get a user",
+            "description": {
+              "content": "Gets a user by user ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "users",
+                ":userId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0aeaf77a-4333-4fb7-8f53-91f7bf2493d8",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "users",
+                    ":userId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "userId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"id\": \"string\",\n  \"selfLink\": \"http://sFvyQzAq.kydakmFCWYIMtylGiacm.aC\",\n  \"displayName\": \"string\",\n  \"url\": \"https://Uuqa.toVlxXqWom8Uml1xu56,Wi.tZg2fy6WPbpmmyrAF,,.prOUw3FrNne2O\",\n  \"about\": \"string\",\n  \"blogs\": {\n    \"selfLink\": \"http://bafu.fjuK85BHZmTDl0.N7SoTVi5MnYeddCsMit8r8a\"\n  },\n  \"locale\": {\n    \"language\": \"string\",\n    \"country\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.googleapis.com/blogger/v3",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/blogger https://www.googleapis.com/auth/blogger.readonly"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "8102b8fb-d6ab-4097-aa46-3e72334ff625",
+    "name": "Google Blogger Blogs Users API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Blogger API v3 allows you to create, read, update, and delete Blogger resources including blogs, posts, pages, comments, and users. You can integrate Blogger content into your application using RESTful operations.\n\nContact Support:\n Name: Google",
+      "type": "text/plain"
+    }
+  }
+}

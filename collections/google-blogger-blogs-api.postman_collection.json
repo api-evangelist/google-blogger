@@ -1,0 +1,1717 @@
+{
+  "item": [
+    {
+      "id": "d7dc0cc3-dcbe-433f-8727-6ba1e6199386",
+      "name": "Blogs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6b755cdc-d186-4560-bded-b88da01f5c00",
+          "name": "Get a blog",
+          "request": {
+            "name": "Get a blog",
+            "description": {
+              "content": "Gets a blog by ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "blogs",
+                ":blogId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blogId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1b513119-f7a2-490d-8705-ae28dae6c40b",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "blogs",
+                    ":blogId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blogId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"published\": \"1969-11-08T00:34:14.248Z\",\n  \"updated\": \"2002-11-15T17:27:05.454Z\",\n  \"url\": \"https://tebbzIZWMMzXaTDxr.tyH5SNx8yE99O-8yNzRdmQcoRMvYI9y-ryBgHmjXaqZ9Wpsmuc\",\n  \"selfLink\": \"http://gbVWEZxwayshCPJgoQpZaoDWlK.tnoajpXZAQX0b\",\n  \"posts\": {\n    \"totalItems\": 7428,\n    \"selfLink\": \"https://rkDjmkm.lvqkZu\"\n  },\n  \"pages\": {\n    \"totalItems\": 7947,\n    \"selfLink\": \"http://MTniLmTroLeCTsJYOhLgOwp.xbFYBcRUep.uGNvGiVMn5M7a.ifTUJwO05dGra2qmtSjJmeAVMAfWp3Ivf\"\n  },\n  \"locale\": {\n    \"language\": \"string\",\n    \"country\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4bd8945b-457c-4ff6-a47a-f628d8830b8f",
+          "name": "Get a blog by URL",
+          "request": {
+            "name": "Get a blog by URL",
+            "description": {
+              "content": "Gets a blog by URL.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "blogs",
+                "byurl"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "url",
+                  "value": "<uri>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3b1aa80d-66c7-4479-8158-01eb8696591e",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "blogs",
+                    "byurl"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "url",
+                      "value": "<uri>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"published\": \"1969-11-08T00:34:14.248Z\",\n  \"updated\": \"2002-11-15T17:27:05.454Z\",\n  \"url\": \"https://tebbzIZWMMzXaTDxr.tyH5SNx8yE99O-8yNzRdmQcoRMvYI9y-ryBgHmjXaqZ9Wpsmuc\",\n  \"selfLink\": \"http://gbVWEZxwayshCPJgoQpZaoDWlK.tnoajpXZAQX0b\",\n  \"posts\": {\n    \"totalItems\": 7428,\n    \"selfLink\": \"https://rkDjmkm.lvqkZu\"\n  },\n  \"pages\": {\n    \"totalItems\": 7947,\n    \"selfLink\": \"http://MTniLmTroLeCTsJYOhLgOwp.xbFYBcRUep.uGNvGiVMn5M7a.ifTUJwO05dGra2qmtSjJmeAVMAfWp3Ivf\"\n  },\n  \"locale\": {\n    \"language\": \"string\",\n    \"country\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2a7fed92-0557-4bbf-8b47-ce82b05827bf",
+          "name": "List posts",
+          "request": {
+            "name": "List posts",
+            "description": {
+              "content": "Lists posts for a blog.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "blogs",
+                ":blogId",
+                "posts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "maxResults",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageToken",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "labels",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "orderBy",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blogId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b4022af4-9fcb-4093-bd5b-d88f9c1bb51d",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "blogs",
+                    ":blogId",
+                    "posts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "pageToken",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "labels",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "startDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "status",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "orderBy",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blogId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"nextPageToken\": \"string\",\n  \"items\": [\n    {\n      \"kind\": \"string\",\n      \"id\": \"string\",\n      \"blog\": {\n        \"id\": \"string\"\n      },\n      \"published\": \"1965-11-26T09:14:46.522Z\",\n      \"updated\": \"1994-09-22T04:04:46.671Z\",\n      \"url\": \"https://vhJFaDOimAobPCmZULfOAtBShwCWJtJ.ekjGYZNG9nPCZ\",\n      \"selfLink\": \"https://DmSFAbgpiQRytkMSQTjbKWSMoYcbQ.uyaheHq4Ziozu5upOBGG9XbrwTBgkTida4dKpVEzhh2Q4z4wbgOrJN\",\n      \"title\": \"string\",\n      \"content\": \"string\",\n      \"author\": {\n        \"id\": \"string\",\n        \"displayName\": \"string\",\n        \"url\": \"https://cZiIOgDHbtFbPzoIRyXx.cvQzpVIaRKrgCMOpP.RIx6J,.5p7Y9nw5oHRl6RYgxLUxnH6VlLlxWpBnm\",\n        \"image\": {\n          \"url\": \"https://xmGcYYPMTRmsImtDlQMkKW.zoYtKFWZM-ooTy,SiIUILKluYh9LoF\"\n        }\n      },\n      \"labels\": [\n        \"string\",\n        \"string\"\n      ],\n      \"replies\": {\n        \"totalItems\": \"string\",\n        \"selfLink\": \"http://lKkobmzMrU.yxixTNTJ8Ig0N5lEqezvGrOo\"\n      },\n      \"status\": \"LIVE\"\n    },\n    {\n      \"kind\": \"string\",\n      \"id\": \"string\",\n      \"blog\": {\n        \"id\": \"string\"\n      },\n      \"published\": \"2010-10-06T17:53:11.926Z\",\n      \"updated\": \"1982-07-31T23:45:48.301Z\",\n      \"url\": \"http://YTgfruskWzAyrSgufiDCvgUNVTwHi.qkcFWlIrOx9hsUnGRL..BsQzJxuP6MfuYABuxRrLCfH\",\n      \"selfLink\": \"http://xhwXrhitPPQCshHLTb.ekaazULk5VqdcknpdiBoGbqgJm,yswj4sqdFup5BjVJUMYo,+oeDFkuE\",\n      \"title\": \"string\",\n      \"content\": \"string\",\n      \"author\": {\n        \"id\": \"string\",\n        \"displayName\": \"string\",\n        \"url\": \"https://lWpjHbUozERoNaMkpKfAOsGaVZ.legiW5BkxKK+Er6OlDW1UYSPR4lvfF+qKz0ISg.1Sz.IEfrYvPvH97vKn7OFO9kI+.Tt\",\n        \"image\": {\n          \"url\": \"https://saKFPQvuSmmV.hgjlYWFcZ-60mHYO4oj4W7fmIXbSihEg2U.jlLuAyP5OAMssNY+8l7M3ku.M-2c\"\n        }\n      },\n      \"labels\": [\n        \"string\",\n        \"string\"\n      ],\n      \"replies\": {\n        \"totalItems\": \"string\",\n        \"selfLink\": \"https://akkEAxpaaXDaJ.sfksC+tmMd1MYMCeH3RErDuoUOL--dTDRt,+utOmKEn0a+s,tlYCtv+FF+CdqppXowsNUUZSgA\"\n      },\n      \"status\": \"DRAFT\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1eaaa703-34c6-4df5-830d-96bf6ae1648b",
+          "name": "Create a post",
+          "request": {
+            "name": "Create a post",
+            "description": {
+              "content": "Adds a post to a blog.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "blogs",
+                ":blogId",
+                "posts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "isDraft",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blogId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"kind\": \"<string>\",\n  \"id\": \"<string>\",\n  \"blog\": {\n    \"id\": \"<string>\"\n  },\n  \"published\": \"<dateTime>\",\n  \"updated\": \"<dateTime>\",\n  \"url\": \"<uri>\",\n  \"selfLink\": \"<uri>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"author\": {\n    \"id\": \"<string>\",\n    \"displayName\": \"<string>\",\n    \"url\": \"<uri>\",\n    \"image\": {\n      \"url\": \"<uri>\"\n    }\n  },\n  \"labels\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"replies\": {\n    \"totalItems\": \"<string>\",\n    \"selfLink\": \"<uri>\"\n  },\n  \"status\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "186589c8-9e50-4686-b046-209495e182d4",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "blogs",
+                    ":blogId",
+                    "posts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "isDraft",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blogId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"kind\": \"<string>\",\n  \"id\": \"<string>\",\n  \"blog\": {\n    \"id\": \"<string>\"\n  },\n  \"published\": \"<dateTime>\",\n  \"updated\": \"<dateTime>\",\n  \"url\": \"<uri>\",\n  \"selfLink\": \"<uri>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"author\": {\n    \"id\": \"<string>\",\n    \"displayName\": \"<string>\",\n    \"url\": \"<uri>\",\n    \"image\": {\n      \"url\": \"<uri>\"\n    }\n  },\n  \"labels\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"replies\": {\n    \"totalItems\": \"<string>\",\n    \"selfLink\": \"<uri>\"\n  },\n  \"status\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"id\": \"string\",\n  \"blog\": {\n    \"id\": \"string\"\n  },\n  \"published\": \"1969-09-27T02:32:50.584Z\",\n  \"updated\": \"1959-09-27T23:08:31.036Z\",\n  \"url\": \"https://zpaQnfEyaEafypAQHykSSLJCcScGEv.hdfs+Wypoz48,3eIwW5ePWeIrxJUpYv-zgn-\",\n  \"selfLink\": \"http://XFwrkWsKBrNJueqIfNA.xqxealSX92TU,8OmYhIidqT0oWzSPK.g462.UnA\",\n  \"title\": \"string\",\n  \"content\": \"string\",\n  \"author\": {\n    \"id\": \"string\",\n    \"displayName\": \"string\",\n    \"url\": \"http://fufHZSQrTkIGBkmWYCGcy.pkZJkmo+bFldTJEfpLUSCj73MU5N+l.pPwUBkuOBwTExd5mfgVAQebr\",\n    \"image\": {\n      \"url\": \"https://zTGEYqDDvjlumGsNSAenkDfYH.qdCcfA\"\n    }\n  },\n  \"labels\": [\n    \"string\",\n    \"string\"\n  ],\n  \"replies\": {\n    \"totalItems\": \"string\",\n    \"selfLink\": \"https://TbvLNjImTELTbbmlJfTCSYQnBvmQ.djeeEOw7uH\"\n  },\n  \"status\": \"SCHEDULED\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1dd07b50-0cf7-4d31-902c-2c4f3de6b91b",
+          "name": "Get a post",
+          "request": {
+            "name": "Get a post",
+            "description": {
+              "content": "Gets a post by blog ID and post ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "blogs",
+                ":blogId",
+                "posts",
+                ":postId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blogId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "postId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "88b05086-def0-4afa-a777-abc163836ce9",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "blogs",
+                    ":blogId",
+                    "posts",
+                    ":postId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blogId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "postId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"id\": \"string\",\n  \"blog\": {\n    \"id\": \"string\"\n  },\n  \"published\": \"1969-09-27T02:32:50.584Z\",\n  \"updated\": \"1959-09-27T23:08:31.036Z\",\n  \"url\": \"https://zpaQnfEyaEafypAQHykSSLJCcScGEv.hdfs+Wypoz48,3eIwW5ePWeIrxJUpYv-zgn-\",\n  \"selfLink\": \"http://XFwrkWsKBrNJueqIfNA.xqxealSX92TU,8OmYhIidqT0oWzSPK.g462.UnA\",\n  \"title\": \"string\",\n  \"content\": \"string\",\n  \"author\": {\n    \"id\": \"string\",\n    \"displayName\": \"string\",\n    \"url\": \"http://fufHZSQrTkIGBkmWYCGcy.pkZJkmo+bFldTJEfpLUSCj73MU5N+l.pPwUBkuOBwTExd5mfgVAQebr\",\n    \"image\": {\n      \"url\": \"https://zTGEYqDDvjlumGsNSAenkDfYH.qdCcfA\"\n    }\n  },\n  \"labels\": [\n    \"string\",\n    \"string\"\n  ],\n  \"replies\": {\n    \"totalItems\": \"string\",\n    \"selfLink\": \"https://TbvLNjImTELTbbmlJfTCSYQnBvmQ.djeeEOw7uH\"\n  },\n  \"status\": \"SCHEDULED\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c2e91a9e-e858-49de-aa7f-c7c14294c357",
+          "name": "Update a post",
+          "request": {
+            "name": "Update a post",
+            "description": {
+              "content": "Updates a post by blog ID and post ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "blogs",
+                ":blogId",
+                "posts",
+                ":postId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blogId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "postId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"kind\": \"<string>\",\n  \"id\": \"<string>\",\n  \"blog\": {\n    \"id\": \"<string>\"\n  },\n  \"published\": \"<dateTime>\",\n  \"updated\": \"<dateTime>\",\n  \"url\": \"<uri>\",\n  \"selfLink\": \"<uri>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"author\": {\n    \"id\": \"<string>\",\n    \"displayName\": \"<string>\",\n    \"url\": \"<uri>\",\n    \"image\": {\n      \"url\": \"<uri>\"\n    }\n  },\n  \"labels\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"replies\": {\n    \"totalItems\": \"<string>\",\n    \"selfLink\": \"<uri>\"\n  },\n  \"status\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "232b372c-7653-414d-86e2-0dcda3a90112",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "blogs",
+                    ":blogId",
+                    "posts",
+                    ":postId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blogId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "postId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"kind\": \"<string>\",\n  \"id\": \"<string>\",\n  \"blog\": {\n    \"id\": \"<string>\"\n  },\n  \"published\": \"<dateTime>\",\n  \"updated\": \"<dateTime>\",\n  \"url\": \"<uri>\",\n  \"selfLink\": \"<uri>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"author\": {\n    \"id\": \"<string>\",\n    \"displayName\": \"<string>\",\n    \"url\": \"<uri>\",\n    \"image\": {\n      \"url\": \"<uri>\"\n    }\n  },\n  \"labels\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"replies\": {\n    \"totalItems\": \"<string>\",\n    \"selfLink\": \"<uri>\"\n  },\n  \"status\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b29c5048-b244-4909-974e-7fa1ae9f4429",
+          "name": "Patch a post",
+          "request": {
+            "name": "Patch a post",
+            "description": {
+              "content": "Patches a post.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "blogs",
+                ":blogId",
+                "posts",
+                ":postId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blogId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "postId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"kind\": \"<string>\",\n  \"id\": \"<string>\",\n  \"blog\": {\n    \"id\": \"<string>\"\n  },\n  \"published\": \"<dateTime>\",\n  \"updated\": \"<dateTime>\",\n  \"url\": \"<uri>\",\n  \"selfLink\": \"<uri>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"author\": {\n    \"id\": \"<string>\",\n    \"displayName\": \"<string>\",\n    \"url\": \"<uri>\",\n    \"image\": {\n      \"url\": \"<uri>\"\n    }\n  },\n  \"labels\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"replies\": {\n    \"totalItems\": \"<string>\",\n    \"selfLink\": \"<uri>\"\n  },\n  \"status\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "014ebfc6-4562-48fa-8aba-3856ac8dfc8f",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "blogs",
+                    ":blogId",
+                    "posts",
+                    ":postId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blogId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "postId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"kind\": \"<string>\",\n  \"id\": \"<string>\",\n  \"blog\": {\n    \"id\": \"<string>\"\n  },\n  \"published\": \"<dateTime>\",\n  \"updated\": \"<dateTime>\",\n  \"url\": \"<uri>\",\n  \"selfLink\": \"<uri>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"author\": {\n    \"id\": \"<string>\",\n    \"displayName\": \"<string>\",\n    \"url\": \"<uri>\",\n    \"image\": {\n      \"url\": \"<uri>\"\n    }\n  },\n  \"labels\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"replies\": {\n    \"totalItems\": \"<string>\",\n    \"selfLink\": \"<uri>\"\n  },\n  \"status\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1d755235-c02a-4c7c-99d7-01a7a4636837",
+          "name": "Delete a post",
+          "request": {
+            "name": "Delete a post",
+            "description": {
+              "content": "Deletes a post by blog ID and post ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "blogs",
+                ":blogId",
+                "posts",
+                ":postId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blogId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "postId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7f1459a5-3364-4695-b4df-587951b81514",
+              "name": "Successful deletion",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "blogs",
+                    ":blogId",
+                    "posts",
+                    ":postId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blogId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "postId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "31f4d869-dbc8-47fd-86be-b8a013b63b78",
+          "name": "Search posts",
+          "request": {
+            "name": "Search posts",
+            "description": {
+              "content": "Searches for posts matching the given query terms in a blog.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "blogs",
+                ":blogId",
+                "posts",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blogId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c613657d-dae3-4df4-80e6-a0ffea09364f",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "blogs",
+                    ":blogId",
+                    "posts",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blogId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"nextPageToken\": \"string\",\n  \"items\": [\n    {\n      \"kind\": \"string\",\n      \"id\": \"string\",\n      \"blog\": {\n        \"id\": \"string\"\n      },\n      \"published\": \"1965-11-26T09:14:46.522Z\",\n      \"updated\": \"1994-09-22T04:04:46.671Z\",\n      \"url\": \"https://vhJFaDOimAobPCmZULfOAtBShwCWJtJ.ekjGYZNG9nPCZ\",\n      \"selfLink\": \"https://DmSFAbgpiQRytkMSQTjbKWSMoYcbQ.uyaheHq4Ziozu5upOBGG9XbrwTBgkTida4dKpVEzhh2Q4z4wbgOrJN\",\n      \"title\": \"string\",\n      \"content\": \"string\",\n      \"author\": {\n        \"id\": \"string\",\n        \"displayName\": \"string\",\n        \"url\": \"https://cZiIOgDHbtFbPzoIRyXx.cvQzpVIaRKrgCMOpP.RIx6J,.5p7Y9nw5oHRl6RYgxLUxnH6VlLlxWpBnm\",\n        \"image\": {\n          \"url\": \"https://xmGcYYPMTRmsImtDlQMkKW.zoYtKFWZM-ooTy,SiIUILKluYh9LoF\"\n        }\n      },\n      \"labels\": [\n        \"string\",\n        \"string\"\n      ],\n      \"replies\": {\n        \"totalItems\": \"string\",\n        \"selfLink\": \"http://lKkobmzMrU.yxixTNTJ8Ig0N5lEqezvGrOo\"\n      },\n      \"status\": \"LIVE\"\n    },\n    {\n      \"kind\": \"string\",\n      \"id\": \"string\",\n      \"blog\": {\n        \"id\": \"string\"\n      },\n      \"published\": \"2010-10-06T17:53:11.926Z\",\n      \"updated\": \"1982-07-31T23:45:48.301Z\",\n      \"url\": \"http://YTgfruskWzAyrSgufiDCvgUNVTwHi.qkcFWlIrOx9hsUnGRL..BsQzJxuP6MfuYABuxRrLCfH\",\n      \"selfLink\": \"http://xhwXrhitPPQCshHLTb.ekaazULk5VqdcknpdiBoGbqgJm,yswj4sqdFup5BjVJUMYo,+oeDFkuE\",\n      \"title\": \"string\",\n      \"content\": \"string\",\n      \"author\": {\n        \"id\": \"string\",\n        \"displayName\": \"string\",\n        \"url\": \"https://lWpjHbUozERoNaMkpKfAOsGaVZ.legiW5BkxKK+Er6OlDW1UYSPR4lvfF+qKz0ISg.1Sz.IEfrYvPvH97vKn7OFO9kI+.Tt\",\n        \"image\": {\n          \"url\": \"https://saKFPQvuSmmV.hgjlYWFcZ-60mHYO4oj4W7fmIXbSihEg2U.jlLuAyP5OAMssNY+8l7M3ku.M-2c\"\n        }\n      },\n      \"labels\": [\n        \"string\",\n        \"string\"\n      ],\n      \"replies\": {\n        \"totalItems\": \"string\",\n        \"selfLink\": \"https://akkEAxpaaXDaJ.sfksC+tmMd1MYMCeH3RErDuoUOL--dTDRt,+utOmKEn0a+s,tlYCtv+FF+CdqppXowsNUUZSgA\"\n      },\n      \"status\": \"DRAFT\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "720fbfed-95f6-4785-87e3-4aa67a209036",
+          "name": "List pages",
+          "request": {
+            "name": "List pages",
+            "description": {
+              "content": "Lists pages for a blog.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "blogs",
+                ":blogId",
+                "pages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blogId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "172ec839-20f0-4678-a4b9-3f376d0d7014",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "blogs",
+                    ":blogId",
+                    "pages"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blogId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"items\": [\n    {\n      \"kind\": \"string\",\n      \"id\": \"string\",\n      \"blog\": {\n        \"id\": \"string\"\n      },\n      \"published\": \"2024-08-05T10:31:13.248Z\",\n      \"updated\": \"1994-05-28T01:05:23.768Z\",\n      \"url\": \"https://cXWsONMbkncQzrXfCvhK.lfVfeDgJYtNOqFNV+Hx3KjxP4keCL6Ti9S-RsQKJ6OGWKX\",\n      \"selfLink\": \"https://snxVViymJntQZWqyWJhvWXnLjgOkbQ.qzmsOBNHwigGcOVu,XvSrKtqeh6tcoDvsmr2F3D2Qk.vAKkZb+3lnsc9\",\n      \"title\": \"string\",\n      \"content\": \"string\",\n      \"author\": {\n        \"id\": \"string\",\n        \"displayName\": \"string\",\n        \"url\": \"http://vQ.bqjSqe6XMGVd\"\n      },\n      \"status\": \"LIVE\"\n    },\n    {\n      \"kind\": \"string\",\n      \"id\": \"string\",\n      \"blog\": {\n        \"id\": \"string\"\n      },\n      \"published\": \"1966-06-29T00:44:01.472Z\",\n      \"updated\": \"1982-11-02T17:34:14.243Z\",\n      \"url\": \"http://bEwtZFPYJyApVyoQzqOkxlYCTqiw.qejmqmDatO3,i6e7CYZLrOatYmbbuROfpj7fwgNnCJ6wjS8Rc9,n8veTQVpqfJ\",\n      \"selfLink\": \"https://bNwuiEfsjJRThJGpY.wwgvQOVBMNlwAM2LcYh88SutlYHpbiRyPu,4q-Ky\",\n      \"title\": \"string\",\n      \"content\": \"string\",\n      \"author\": {\n        \"id\": \"string\",\n        \"displayName\": \"string\",\n        \"url\": \"http://VVPaCS.oelbRAE,8mp51jx,OIsas9B.hXshl3BXQ\"\n      },\n      \"status\": \"LIVE\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "73970104-fd38-41b5-8a69-80a290821ede",
+          "name": "Create a page",
+          "request": {
+            "name": "Create a page",
+            "description": {
+              "content": "Adds a page to a blog.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "blogs",
+                ":blogId",
+                "pages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blogId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"kind\": \"<string>\",\n  \"id\": \"<string>\",\n  \"blog\": {\n    \"id\": \"<string>\"\n  },\n  \"published\": \"<dateTime>\",\n  \"updated\": \"<dateTime>\",\n  \"url\": \"<uri>\",\n  \"selfLink\": \"<uri>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"author\": {\n    \"id\": \"<string>\",\n    \"displayName\": \"<string>\",\n    \"url\": \"<uri>\"\n  },\n  \"status\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3e930f1e-af6c-45b9-8d10-40c2aa22fe0f",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "blogs",
+                    ":blogId",
+                    "pages"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blogId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"kind\": \"<string>\",\n  \"id\": \"<string>\",\n  \"blog\": {\n    \"id\": \"<string>\"\n  },\n  \"published\": \"<dateTime>\",\n  \"updated\": \"<dateTime>\",\n  \"url\": \"<uri>\",\n  \"selfLink\": \"<uri>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"author\": {\n    \"id\": \"<string>\",\n    \"displayName\": \"<string>\",\n    \"url\": \"<uri>\"\n  },\n  \"status\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "112260ed-53ba-43b5-a994-424a164dff1f",
+          "name": "List comments",
+          "request": {
+            "name": "List comments",
+            "description": {
+              "content": "Lists comments for a post.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "blogs",
+                ":blogId",
+                "posts",
+                ":postId",
+                "comments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "maxResults",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageToken",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blogId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "postId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cdf5a77d-d755-4df4-9455-1944d863fb99",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "blogs",
+                    ":blogId",
+                    "posts",
+                    ":postId",
+                    "comments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "pageToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blogId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "postId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"nextPageToken\": \"string\",\n  \"items\": [\n    {\n      \"kind\": \"string\",\n      \"id\": \"string\",\n      \"post\": {\n        \"id\": \"string\"\n      },\n      \"blog\": {\n        \"id\": \"string\"\n      },\n      \"published\": \"1968-06-02T21:11:20.426Z\",\n      \"updated\": \"1991-07-07T00:09:07.345Z\",\n      \"selfLink\": \"http://AMETvNcR.bjigif8uZjadVDzKhvBQq044PSR0.cHcR0N346jja117ei5rG\",\n      \"content\": \"string\",\n      \"author\": {\n        \"id\": \"string\",\n        \"displayName\": \"string\",\n        \"url\": \"https://JmXfrwltUWWvRdYxuZqKkeHIxTa.dvhJAlRYl2V50mlL\"\n      },\n      \"status\": \"PENDING\"\n    },\n    {\n      \"kind\": \"string\",\n      \"id\": \"string\",\n      \"post\": {\n        \"id\": \"string\"\n      },\n      \"blog\": {\n        \"id\": \"string\"\n      },\n      \"published\": \"1948-03-23T02:06:13.676Z\",\n      \"updated\": \"1998-04-02T01:38:19.582Z\",\n      \"selfLink\": \"https://ezAJrnRIWMJHeQMJwUSWXaawXMA.swejKdEKnJVqepKg9sznm3dmrus2l1\",\n      \"content\": \"string\",\n      \"author\": {\n        \"id\": \"string\",\n        \"displayName\": \"string\",\n        \"url\": \"http://t.btfhPw0YL.lGqp8KZpTzI,ZvzrQ8KPVrKj6yLS8FdxJ7F\"\n      },\n      \"status\": \"PENDING\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "15ac27cc-aafa-46ac-a4e9-d93db6501253",
+          "name": "Get a comment",
+          "request": {
+            "name": "Get a comment",
+            "description": {
+              "content": "Gets a comment by ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "blogs",
+                ":blogId",
+                "posts",
+                ":postId",
+                "comments",
+                ":commentId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blogId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "postId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "commentId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "39651a3b-feb7-43bd-91cb-e64d6e7fce4a",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "blogs",
+                    ":blogId",
+                    "posts",
+                    ":postId",
+                    "comments",
+                    ":commentId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blogId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "postId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "commentId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"id\": \"string\",\n  \"post\": {\n    \"id\": \"string\"\n  },\n  \"blog\": {\n    \"id\": \"string\"\n  },\n  \"published\": \"1953-06-11T09:49:13.522Z\",\n  \"updated\": \"1959-01-03T00:18:05.376Z\",\n  \"selfLink\": \"http://uXdoWpkZJvYa.stfc62-f799nGw-DAeQsbirf\",\n  \"content\": \"string\",\n  \"author\": {\n    \"id\": \"string\",\n    \"displayName\": \"string\",\n    \"url\": \"http://EPebnSxHzRbuRukrVsmeZCYssf.qztwl-n5FnAuz+ubVT,52RGiQMNStD,6fFXlzTYnoJbMCufnM\"\n  },\n  \"status\": \"SPAM\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cb225c9c-6521-480e-b3ab-f39964b2fe41",
+          "name": "Delete a comment",
+          "request": {
+            "name": "Delete a comment",
+            "description": {
+              "content": "Deletes a comment by blog ID, post ID, and comment ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "blogs",
+                ":blogId",
+                "posts",
+                ":postId",
+                "comments",
+                ":commentId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blogId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "postId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "commentId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4154a387-f36c-4f87-ae22-9d272091f896",
+              "name": "Successful deletion",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "blogs",
+                    ":blogId",
+                    "posts",
+                    ":postId",
+                    "comments",
+                    ":commentId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blogId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "postId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "commentId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.googleapis.com/blogger/v3",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/blogger https://www.googleapis.com/auth/blogger.readonly"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "f0a65255-bed4-4d03-beff-baed3da1261a",
+    "name": "Google Blogger Blogs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Blogger API v3 allows you to create, read, update, and delete Blogger resources including blogs, posts, pages, comments, and users. You can integrate Blogger content into your application using RESTful operations.\n\nContact Support:\n Name: Google",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,398 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Blogger Blogs API",
+    "version": "v3"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://accounts.google.com/o/oauth2/auth",
+      "accessTokenUrl": "https://oauth2.googleapis.com/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Blogs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a blog",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.googleapis.com/blogger/v3/blogs/:blogId",
+            "params": [
+              {
+                "name": "blogId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Gets a blog by ID."
+        },
+        {
+          "info": {
+            "name": "Get a blog by URL",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.googleapis.com/blogger/v3/blogs/byurl",
+            "params": [
+              {
+                "name": "url",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Gets a blog by URL."
+        },
+        {
+          "info": {
+            "name": "List posts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.googleapis.com/blogger/v3/blogs/:blogId/posts",
+            "params": [
+              {
+                "name": "blogId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "pageToken",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "labels",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "status",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "orderBy",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Lists posts for a blog."
+        },
+        {
+          "info": {
+            "name": "Create a post",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.googleapis.com/blogger/v3/blogs/:blogId/posts",
+            "params": [
+              {
+                "name": "blogId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "isDraft",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Adds a post to a blog."
+        },
+        {
+          "info": {
+            "name": "Get a post",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.googleapis.com/blogger/v3/blogs/:blogId/posts/:postId",
+            "params": [
+              {
+                "name": "blogId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "postId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Gets a post by blog ID and post ID."
+        },
+        {
+          "info": {
+            "name": "Update a post",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://www.googleapis.com/blogger/v3/blogs/:blogId/posts/:postId",
+            "params": [
+              {
+                "name": "blogId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "postId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates a post by blog ID and post ID."
+        },
+        {
+          "info": {
+            "name": "Patch a post",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://www.googleapis.com/blogger/v3/blogs/:blogId/posts/:postId",
+            "params": [
+              {
+                "name": "blogId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "postId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Patches a post."
+        },
+        {
+          "info": {
+            "name": "Delete a post",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.googleapis.com/blogger/v3/blogs/:blogId/posts/:postId",
+            "params": [
+              {
+                "name": "blogId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "postId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes a post by blog ID and post ID."
+        },
+        {
+          "info": {
+            "name": "Search posts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.googleapis.com/blogger/v3/blogs/:blogId/posts/search",
+            "params": [
+              {
+                "name": "blogId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Searches for posts matching the given query terms in a blog."
+        },
+        {
+          "info": {
+            "name": "List pages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.googleapis.com/blogger/v3/blogs/:blogId/pages",
+            "params": [
+              {
+                "name": "blogId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists pages for a blog."
+        },
+        {
+          "info": {
+            "name": "Create a page",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.googleapis.com/blogger/v3/blogs/:blogId/pages",
+            "params": [
+              {
+                "name": "blogId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Adds a page to a blog."
+        },
+        {
+          "info": {
+            "name": "List comments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.googleapis.com/blogger/v3/blogs/:blogId/posts/:postId/comments",
+            "params": [
+              {
+                "name": "blogId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "postId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "pageToken",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Lists comments for a post."
+        },
+        {
+          "info": {
+            "name": "Get a comment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.googleapis.com/blogger/v3/blogs/:blogId/posts/:postId/comments/:commentId",
+            "params": [
+              {
+                "name": "blogId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "postId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "commentId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Gets a comment by ID."
+        },
+        {
+          "info": {
+            "name": "Delete a comment",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://www.googleapis.com/blogger/v3/blogs/:blogId/posts/:postId/comments/:commentId",
+            "params": [
+              {
+                "name": "blogId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "postId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "commentId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes a comment by blog ID, post ID, and comment ID."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
