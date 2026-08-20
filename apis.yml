@@ -37,6 +37,8 @@ apis:
   humanURL: https://developers.google.com/blogger
   baseURL: https://www.googleapis.com/blogger/v3
   tags:
+  - Blog
+  tags_raw:
   - Blogs
   properties:
   - type: OpenAPI
@@ -49,6 +51,8 @@ apis:
   humanURL: https://developers.google.com/blogger
   baseURL: https://www.googleapis.com/blogger/v3
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
