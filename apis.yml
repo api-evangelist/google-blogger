@@ -4,6 +4,18 @@ description: >-
   The Google Blogger API v3 allows you to integrate Blogger content with your application. You can create, read, update,
   and delete blogs, posts, pages, comments, and user information using RESTful operations with OAuth 2.0 authentication.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
