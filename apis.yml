@@ -72,6 +72,8 @@ apis:
   - type: JSONSchema
     url: json-schema/blogger.json
 common:
+  - type: Website
+    url: https://www.google.com/
   - type: AgenticAccess
     url: agentic-access/google-blogger-agentic-access.yml
   - type: VulnerabilityDisclosure
@@ -93,3 +95,5 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-parent: google
+x-relationship: product

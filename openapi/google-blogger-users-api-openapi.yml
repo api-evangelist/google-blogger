@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Google Blogger Blogs Users API
   description: The Blogger API v3 allows you to create, read, update, and delete Blogger resources including blogs, posts, pages, comments, and users. You can integrate Blogger content into your application using RESTful operations.
@@ -56,6 +56,46 @@ paths:
       - Users
 components:
   schemas:
+    BlogListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Blog'
+    User:
+      type: object
+      properties:
+        kind:
+          type: string
+          const: blogger#user
+        id:
+          type: string
+        selfLink:
+          type: string
+          format: uri
+        displayName:
+          type: string
+        url:
+          type: string
+          format: uri
+        about:
+          type: string
+        blogs:
+          type: object
+          properties:
+            selfLink:
+              type: string
+              format: uri
+        locale:
+          type: object
+          properties:
+            language:
+              type: string
+            country:
+              type: string
     Blog:
       type: object
       properties:
@@ -93,46 +133,6 @@ components:
           properties:
             totalItems:
               type: integer
-            selfLink:
-              type: string
-              format: uri
-        locale:
-          type: object
-          properties:
-            language:
-              type: string
-            country:
-              type: string
-    BlogListResponse:
-      type: object
-      properties:
-        kind:
-          type: string
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Blog'
-    User:
-      type: object
-      properties:
-        kind:
-          type: string
-          const: blogger#user
-        id:
-          type: string
-        selfLink:
-          type: string
-          format: uri
-        displayName:
-          type: string
-        url:
-          type: string
-          format: uri
-        about:
-          type: string
-        blogs:
-          type: object
-          properties:
             selfLink:
               type: string
               format: uri
