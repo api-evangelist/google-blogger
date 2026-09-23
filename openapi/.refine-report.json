@@ -1,8 +1,7 @@
 {
   "provider": "google-blogger",
   "sources": [
-    "google-blogger-blogs-api-openapi.yml",
-    "google-blogger-users-api-openapi.yml"
+    "_original/blogger.yml"
   ],
   "outputs": [
     "google-blogger-blogs-api-openapi.yml",
@@ -12,9 +11,30 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "google-blogger-blogs-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "google-blogger-users-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "blogger.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "blogger.yml: tagged paths GET /blogs/{blogId} -> Blogs",
+    "blogger.yml: tagged paths GET /blogs/byurl -> Blogs",
+    "blogger.yml: tagged paths GET /users/{userId}/blogs -> Users",
+    "blogger.yml: tagged paths GET /blogs/{blogId}/posts -> Blogs",
+    "blogger.yml: tagged paths POST /blogs/{blogId}/posts -> Blogs",
+    "blogger.yml: tagged paths GET /blogs/{blogId}/posts/{postId} -> Blogs",
+    "blogger.yml: tagged paths PUT /blogs/{blogId}/posts/{postId} -> Blogs",
+    "blogger.yml: tagged paths PATCH /blogs/{blogId}/posts/{postId} -> Blogs",
+    "blogger.yml: tagged paths DELETE /blogs/{blogId}/posts/{postId} -> Blogs",
+    "blogger.yml: tagged paths GET /blogs/{blogId}/posts/search -> Blogs",
+    "blogger.yml: tagged paths GET /blogs/{blogId}/pages -> Blogs",
+    "blogger.yml: tagged paths POST /blogs/{blogId}/pages -> Blogs",
+    "blogger.yml: tagged paths GET /blogs/{blogId}/posts/{postId}/comments -> Blogs",
+    "blogger.yml: tagged paths GET /blogs/{blogId}/posts/{postId}/comments/{commentId} -> Blogs",
+    "blogger.yml: tagged paths DELETE /blogs/{blogId}/posts/{postId}/comments/{commentId} -> Blogs",
+    "blogger.yml: tagged paths GET /users/{userId} -> Users",
+    "blogger.yml: declared missing tag: Blogs",
+    "blogger.yml: declared missing tag: Users",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "google-blogger-blogs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "google-blogger-users-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

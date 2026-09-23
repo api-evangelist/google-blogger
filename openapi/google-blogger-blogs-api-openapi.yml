@@ -401,6 +401,61 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Comment'
+    Page:
+      type: object
+      properties:
+        kind:
+          type: string
+          const: blogger#page
+        id:
+          type: string
+        blog:
+          type: object
+          properties:
+            id:
+              type: string
+        published:
+          type: string
+          format: date-time
+        updated:
+          type: string
+          format: date-time
+        url:
+          type: string
+          format: uri
+        selfLink:
+          type: string
+          format: uri
+        title:
+          type: string
+        content:
+          type: string
+        author:
+          type: object
+          properties:
+            id:
+              type: string
+            displayName:
+              type: string
+            url:
+              type: string
+              format: uri
+        status:
+          type: string
+          enum:
+          - LIVE
+          - DRAFT
+    PostListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        nextPageToken:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Post'
     Post:
       type: object
       properties:
@@ -510,50 +565,15 @@ components:
           - EMPTIED
           - PENDING
           - SPAM
-    Page:
+    PageListResponse:
       type: object
       properties:
         kind:
           type: string
-          const: blogger#page
-        id:
-          type: string
-        blog:
-          type: object
-          properties:
-            id:
-              type: string
-        published:
-          type: string
-          format: date-time
-        updated:
-          type: string
-          format: date-time
-        url:
-          type: string
-          format: uri
-        selfLink:
-          type: string
-          format: uri
-        title:
-          type: string
-        content:
-          type: string
-        author:
-          type: object
-          properties:
-            id:
-              type: string
-            displayName:
-              type: string
-            url:
-              type: string
-              format: uri
-        status:
-          type: string
-          enum:
-          - LIVE
-          - DRAFT
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Page'
     Blog:
       type: object
       properties:
@@ -601,26 +621,6 @@ components:
               type: string
             country:
               type: string
-    PostListResponse:
-      type: object
-      properties:
-        kind:
-          type: string
-        nextPageToken:
-          type: string
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Post'
-    PageListResponse:
-      type: object
-      properties:
-        kind:
-          type: string
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Page'
   securitySchemes:
     oauth2:
       type: oauth2

@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google Blogger Blogs Users API
+  title: Google Blogger Users API
   description: The Blogger API v3 allows you to create, read, update, and delete Blogger resources including blogs, posts, pages, comments, and users. You can integrate Blogger content into your application using RESTful operations.
   version: v3
   contact:
