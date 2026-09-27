@@ -56,15 +56,6 @@ paths:
       - Users
 components:
   schemas:
-    BlogListResponse:
-      type: object
-      properties:
-        kind:
-          type: string
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Blog'
     User:
       type: object
       properties:
@@ -96,6 +87,15 @@ components:
               type: string
             country:
               type: string
+    BlogListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Blog'
     Blog:
       type: object
       properties:
