@@ -390,6 +390,126 @@ paths:
       - Blogs
 components:
   schemas:
+    Post:
+      type: object
+      properties:
+        kind:
+          type: string
+          const: blogger#post
+        id:
+          type: string
+        blog:
+          type: object
+          properties:
+            id:
+              type: string
+        published:
+          type: string
+          format: date-time
+        updated:
+          type: string
+          format: date-time
+        url:
+          type: string
+          format: uri
+        selfLink:
+          type: string
+          format: uri
+        title:
+          type: string
+        content:
+          type: string
+        author:
+          type: object
+          properties:
+            id:
+              type: string
+            displayName:
+              type: string
+            url:
+              type: string
+              format: uri
+            image:
+              type: object
+              properties:
+                url:
+                  type: string
+                  format: uri
+        labels:
+          type: array
+          items:
+            type: string
+        replies:
+          type: object
+          properties:
+            totalItems:
+              type: string
+            selfLink:
+              type: string
+              format: uri
+        status:
+          type: string
+          enum:
+          - LIVE
+          - DRAFT
+          - SCHEDULED
+    Comment:
+      type: object
+      properties:
+        kind:
+          type: string
+          const: blogger#comment
+        id:
+          type: string
+        post:
+          type: object
+          properties:
+            id:
+              type: string
+        blog:
+          type: object
+          properties:
+            id:
+              type: string
+        published:
+          type: string
+          format: date-time
+        updated:
+          type: string
+          format: date-time
+        selfLink:
+          type: string
+          format: uri
+        content:
+          type: string
+        author:
+          type: object
+          properties:
+            id:
+              type: string
+            displayName:
+              type: string
+            url:
+              type: string
+              format: uri
+        status:
+          type: string
+          enum:
+          - LIVE
+          - EMPTIED
+          - PENDING
+          - SPAM
+    CommentListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        nextPageToken:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Comment'
     PostListResponse:
       type: object
       properties:
@@ -501,126 +621,6 @@ components:
               type: string
             country:
               type: string
-    Comment:
-      type: object
-      properties:
-        kind:
-          type: string
-          const: blogger#comment
-        id:
-          type: string
-        post:
-          type: object
-          properties:
-            id:
-              type: string
-        blog:
-          type: object
-          properties:
-            id:
-              type: string
-        published:
-          type: string
-          format: date-time
-        updated:
-          type: string
-          format: date-time
-        selfLink:
-          type: string
-          format: uri
-        content:
-          type: string
-        author:
-          type: object
-          properties:
-            id:
-              type: string
-            displayName:
-              type: string
-            url:
-              type: string
-              format: uri
-        status:
-          type: string
-          enum:
-          - LIVE
-          - EMPTIED
-          - PENDING
-          - SPAM
-    CommentListResponse:
-      type: object
-      properties:
-        kind:
-          type: string
-        nextPageToken:
-          type: string
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Comment'
-    Post:
-      type: object
-      properties:
-        kind:
-          type: string
-          const: blogger#post
-        id:
-          type: string
-        blog:
-          type: object
-          properties:
-            id:
-              type: string
-        published:
-          type: string
-          format: date-time
-        updated:
-          type: string
-          format: date-time
-        url:
-          type: string
-          format: uri
-        selfLink:
-          type: string
-          format: uri
-        title:
-          type: string
-        content:
-          type: string
-        author:
-          type: object
-          properties:
-            id:
-              type: string
-            displayName:
-              type: string
-            url:
-              type: string
-              format: uri
-            image:
-              type: object
-              properties:
-                url:
-                  type: string
-                  format: uri
-        labels:
-          type: array
-          items:
-            type: string
-        replies:
-          type: object
-          properties:
-            totalItems:
-              type: string
-            selfLink:
-              type: string
-              format: uri
-        status:
-          type: string
-          enum:
-          - LIVE
-          - DRAFT
-          - SCHEDULED
   securitySchemes:
     oauth2:
       type: oauth2
