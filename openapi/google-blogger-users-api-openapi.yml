@@ -56,46 +56,6 @@ paths:
       - Users
 components:
   schemas:
-    User:
-      type: object
-      properties:
-        kind:
-          type: string
-          const: blogger#user
-        id:
-          type: string
-        selfLink:
-          type: string
-          format: uri
-        displayName:
-          type: string
-        url:
-          type: string
-          format: uri
-        about:
-          type: string
-        blogs:
-          type: object
-          properties:
-            selfLink:
-              type: string
-              format: uri
-        locale:
-          type: object
-          properties:
-            language:
-              type: string
-            country:
-              type: string
-    BlogListResponse:
-      type: object
-      properties:
-        kind:
-          type: string
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Blog'
     Blog:
       type: object
       properties:
@@ -143,6 +103,46 @@ components:
               type: string
             country:
               type: string
+    User:
+      type: object
+      properties:
+        kind:
+          type: string
+          const: blogger#user
+        id:
+          type: string
+        selfLink:
+          type: string
+          format: uri
+        displayName:
+          type: string
+        url:
+          type: string
+          format: uri
+        about:
+          type: string
+        blogs:
+          type: object
+          properties:
+            selfLink:
+              type: string
+              format: uri
+        locale:
+          type: object
+          properties:
+            language:
+              type: string
+            country:
+              type: string
+    BlogListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Blog'
   securitySchemes:
     oauth2:
       type: oauth2
