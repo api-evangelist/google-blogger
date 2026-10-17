@@ -390,97 +390,6 @@ paths:
       - Blogs
 components:
   schemas:
-    Blog:
-      type: object
-      properties:
-        kind:
-          type: string
-          const: blogger#blog
-        id:
-          type: string
-        name:
-          type: string
-        description:
-          type: string
-        published:
-          type: string
-          format: date-time
-        updated:
-          type: string
-          format: date-time
-        url:
-          type: string
-          format: uri
-        selfLink:
-          type: string
-          format: uri
-        posts:
-          type: object
-          properties:
-            totalItems:
-              type: integer
-            selfLink:
-              type: string
-              format: uri
-        pages:
-          type: object
-          properties:
-            totalItems:
-              type: integer
-            selfLink:
-              type: string
-              format: uri
-        locale:
-          type: object
-          properties:
-            language:
-              type: string
-            country:
-              type: string
-    Page:
-      type: object
-      properties:
-        kind:
-          type: string
-          const: blogger#page
-        id:
-          type: string
-        blog:
-          type: object
-          properties:
-            id:
-              type: string
-        published:
-          type: string
-          format: date-time
-        updated:
-          type: string
-          format: date-time
-        url:
-          type: string
-          format: uri
-        selfLink:
-          type: string
-          format: uri
-        title:
-          type: string
-        content:
-          type: string
-        author:
-          type: object
-          properties:
-            id:
-              type: string
-            displayName:
-              type: string
-            url:
-              type: string
-              format: uri
-        status:
-          type: string
-          enum:
-          - LIVE
-          - DRAFT
     PageListResponse:
       type: object
       properties:
@@ -621,6 +530,97 @@ components:
           - LIVE
           - DRAFT
           - SCHEDULED
+    Page:
+      type: object
+      properties:
+        kind:
+          type: string
+          const: blogger#page
+        id:
+          type: string
+        blog:
+          type: object
+          properties:
+            id:
+              type: string
+        published:
+          type: string
+          format: date-time
+        updated:
+          type: string
+          format: date-time
+        url:
+          type: string
+          format: uri
+        selfLink:
+          type: string
+          format: uri
+        title:
+          type: string
+        content:
+          type: string
+        author:
+          type: object
+          properties:
+            id:
+              type: string
+            displayName:
+              type: string
+            url:
+              type: string
+              format: uri
+        status:
+          type: string
+          enum:
+          - LIVE
+          - DRAFT
+    Blog:
+      type: object
+      properties:
+        kind:
+          type: string
+          const: blogger#blog
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        published:
+          type: string
+          format: date-time
+        updated:
+          type: string
+          format: date-time
+        url:
+          type: string
+          format: uri
+        selfLink:
+          type: string
+          format: uri
+        posts:
+          type: object
+          properties:
+            totalItems:
+              type: integer
+            selfLink:
+              type: string
+              format: uri
+        pages:
+          type: object
+          properties:
+            totalItems:
+              type: integer
+            selfLink:
+              type: string
+              format: uri
+        locale:
+          type: object
+          properties:
+            language:
+              type: string
+            country:
+              type: string
   securitySchemes:
     oauth2:
       type: oauth2
